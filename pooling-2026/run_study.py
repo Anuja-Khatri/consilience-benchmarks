@@ -1,6 +1,6 @@
 """Run the preregistered study (PREREGISTRATION.md): measures M1-M5 for EGFR and the panel.
 
-    python studies/pooling-2026/run_study.py
+    python pooling-2026/run_study.py
 
 Inputs: work/input/<target>.csv (from join.py). Outputs:
 - work/out/P/<target>/: the pooling check's records.csv, classes.csv, summary.json and

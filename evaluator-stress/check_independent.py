@@ -1,6 +1,6 @@
 """The independent second way (spec v1.0 §10.4). Imports NOTHING from `consilience`.
 
-    python -I benchmarks/evaluator-stress/check_independent.py
+    python -I evaluator-stress/check_independent.py
 
 For every BLOCK in results/receipts/**/receipt.json it:
   1. re-scores each stored candidate with the vendored scorer in a FRESH process, using its own minimal

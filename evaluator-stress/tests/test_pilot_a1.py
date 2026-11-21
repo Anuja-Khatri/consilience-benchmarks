@@ -13,7 +13,7 @@ import pytest
 
 from consilience.stress import stress
 
-PILOT = Path(__file__).resolve().parent.parent / "benchmarks" / "evaluator-stress" / "pilot"
+PILOT = Path(__file__).resolve().parent.parent / "pilot"
 slow = pytest.mark.skipif(os.environ.get("CONSILIENCE_SLOW") != "1", reason="slow acceptance test; set CONSILIENCE_SLOW=1")
 
 EXPECTED = {

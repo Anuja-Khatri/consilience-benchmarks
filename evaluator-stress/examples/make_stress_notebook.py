@@ -1,7 +1,7 @@
-"""Build examples/stress_demo.ipynb (run once; the executed notebook is committed).
+"""Build evaluator-stress/examples/stress_demo.ipynb (run once; the executed notebook is committed).
 
-    python examples/make_stress_notebook.py
-    jupyter nbconvert --to notebook --execute --inplace examples/stress_demo.ipynb
+    python evaluator-stress/examples/make_stress_notebook.py
+    jupyter nbconvert --to notebook --execute --inplace evaluator-stress/examples/stress_demo.ipynb
 """
 
 from pathlib import Path
@@ -19,7 +19,7 @@ scoring function. `consilience stress` takes the scorer plus a short contract (w
 which transformations must not change the score, the published record) and looks for a
 counterexample *before* the search runs. Every result has a receipt that `verify` re-checks.
 
-This notebook runs real cases from `benchmarks/evaluator-stress/`, all on published code at
+This notebook runs real cases from `evaluator-stress/`, all on published code at
 pinned commits (`SOURCES.yaml`):
 
 1. a publicly reported bug, before and after its fix (non-finite input);
@@ -28,14 +28,14 @@ pinned commits (`SOURCES.yaml`):
 4. re-checking two stored findings on DeepMind's problem notebooks without re-running the search.
 
 What it is not: a proof (PASS means no counterexample within the budget), a security sandbox, or a
-discovery engine for deep loopholes. See `docs/stress.md` and `benchmarks/evaluator-stress/results/RESULTS.md`."""),
+discovery engine for deep loopholes. See the engine guide ([`docs/stress.md`](https://github.com/Anuja-Khatri/consilience-core/blob/stress-check/docs/stress.md)) and `evaluator-stress/results/RESULTS.md`."""),
     code("""import json, tempfile, time
 from pathlib import Path
 from consilience import __version__, verify
 from consilience.stress import stress
 
-ROOT = Path.cwd().parent if Path.cwd().name == "examples" else Path.cwd()
-B = ROOT / "benchmarks" / "evaluator-stress"
+# run from evaluator-stress/examples/ (the notebook's folder) or from the repository root
+B = Path.cwd().parent if Path.cwd().name == "examples" else Path.cwd() / "evaluator-stress"
 OUT = Path(tempfile.mkdtemp(prefix="stress_demo_"))
 print("consilience", __version__)
 

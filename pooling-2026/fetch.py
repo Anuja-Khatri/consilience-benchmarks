@@ -1,6 +1,6 @@
 """Fetch the study's ChEMBL records from the public ChEMBL web API, pinned and hashed.
 
-    python studies/pooling-2026/fetch.py            # writes data/ (not committed)
+    python pooling-2026/fetch.py            # writes data/ (not committed)
 
 For every target in targets.json: every activity of type IC50, Ki, Kd or EC50 with a
 standard_value; then every assay those activities use. The public API fails on deep

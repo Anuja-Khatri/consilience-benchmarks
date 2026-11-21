@@ -1,6 +1,6 @@
 """Build the study's input tables from the fetched ChEMBL pages (and nothing else).
 
-    python studies/pooling-2026/join.py
+    python pooling-2026/join.py
 
 Checks every file in data/MANIFEST.json against its SHA-256. Then it joins each activity
 with its assay (on assay_chembl_id) and writes one CSV per target:

@@ -1,6 +1,6 @@
 """Validate benchmark contracts WITHOUT running any stress check (step 4: no results before preregistration).
 
-    python benchmarks/evaluator-stress/validate_contract.py <contract.yaml> [...]
+    python evaluator-stress/validate_contract.py <contract.yaml> [...]
 
 For each contract: it loads (named errors), the reference (and initial / claimed_best, if given) passes the
 contract's own validity rules, and the scorer accepts the reference (one call). It prints the reference

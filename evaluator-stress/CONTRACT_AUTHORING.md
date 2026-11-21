@@ -78,7 +78,7 @@ One row per scoring function in the set, including the ones you could not do:
 ## 6. Validate
 
 ```
-python benchmarks/evaluator-stress/validate_contract.py contracts/<SET>/*/contract.yaml
+python evaluator-stress/validate_contract.py contracts/<SET>/*/contract.yaml
 ```
 
 Every `OK` row in COVERAGE.md must pass this.

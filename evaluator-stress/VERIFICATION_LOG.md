@@ -34,7 +34,7 @@
   2. `exploitable_type_violation` compares only with the projected equivalent, which for magnitude attacks is a different construction.
 
   Not fixed: a fix changes the locked decision rules, so it goes to Anu first.
-- **Analysis and recommendation:** consilience-docs `deepmind/stress/RESULTS_45_ANALYSIS.md`.
+- **Analysis and recommendation:** an internal note; its conclusions are in `results/RESULTS.md`.
 
 ## Deviation 2 (Anu approved, 20 Nov 2026): decision rules v1.1, then run 3 (45 contracts, from scratch)
 

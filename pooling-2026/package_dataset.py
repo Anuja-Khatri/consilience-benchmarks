@@ -1,6 +1,6 @@
 """Package the released dataset (build step 6): files only, nothing is uploaded.
 
-    python studies/pooling-2026/package_dataset.py
+    python pooling-2026/package_dataset.py
 
 Writes release/chembl37-pooling-check/:
 - targets/<target>/: the exact input table <target>.csv, and the pooling check's
@@ -169,7 +169,7 @@ Of {m1['r0_comparable_pairs']} pairs of records for the same molecule that unit
 conversion alone treats as comparable, {m1['pairs_paired_by_p']} are pairs of records the
 check keeps, and it refuses {m1['refused']} of those
 ({(m1['refused_share_of_paired'] or 0):.1%}) because a named assay condition differs or
-is not stated. See studies/pooling-2026 for the preregistered study and all numbers.
+is not stated. See pooling-2026 for the preregistered study and all numbers.
 
 ## Limits
 

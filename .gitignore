@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+# the pooling study downloads ChEMBL data locally; it is never committed
+pooling-2026/data/
+pooling-2026/work/
+# scratch receipts from local re-runs
+consilience_receipts/

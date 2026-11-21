@@ -1,6 +1,6 @@
-"""Build examples/egfr_pooling.ipynb (run once; the notebook is committed).
+"""Build pooling-2026/examples/egfr_pooling.ipynb (run once; the notebook is committed).
 
-    python examples/make_egfr_notebook.py
+    python pooling-2026/examples/make_egfr_notebook.py
 """
 
 from pathlib import Path
@@ -26,7 +26,7 @@ not, and whether the poolable ones agree, using `consilience compare-table` with
 `bioactivity` pack. Every result has a receipt anyone can re-run.
 
 Part 1 runs on a small live fetch (the same API call, made directly). Part 2 runs on the
-full EGFR set from the study (`studies/pooling-2026`), all 28,741 IC50, Ki, Kd and EC50
+full EGFR set from the study (`pooling-2026`), all 28,741 IC50, Ki, Kd and EC50
 records."""),
     code("""import json, urllib.request, urllib.parse
 from pathlib import Path
@@ -50,10 +50,10 @@ except Exception as exc:            # the public API is sometimes slow or down
 which assay conditions could not be checked because they live in ChEMBL's `/assay`
 records. Part 2 uses the full set, joined with its assay fields."""),
     md("## Part 2: all EGFR records (the study's input)"),
-    code("""candidates = [Path("../studies/pooling-2026/work/input/CHEMBL203.csv"),
+    code("""candidates = [Path("../work/input/CHEMBL203.csv"),
               Path("chembl37-pooling-check/targets/CHEMBL203/CHEMBL203.csv")]
 egfr = next((p for p in candidates if p.is_file()), None)
-print(egfr or "EGFR input not found: run studies/pooling-2026 fetch.py and join.py, or "
+print(egfr or "EGFR input not found: run pooling-2026 fetch.py and join.py, or "
       "download the released dataset (chembl37-pooling-check)")"""),
     code("""r = compare_table(egfr, map="chembl", pack="bioactivity", out="egfr_full")
 print(r.text)
@@ -104,7 +104,7 @@ for step in v.steps:
 - Ki and IC50 are never pooled unless you switch on `assume=["ki_ic50_x2"]`.
 
 Rules and sources: `docs/packs/bioactivity.md`. Study and all numbers:
-`studies/pooling-2026/results/RESULTS.md`."""),
+`pooling-2026/results/RESULTS.md`."""),
 ]
 
 nb = nbf.v4.new_notebook()

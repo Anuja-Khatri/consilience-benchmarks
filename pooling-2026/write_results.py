@@ -1,6 +1,6 @@
 """Write results/RESULTS.md from results/results.json and results/independent_check.json.
 
-    python studies/pooling-2026/write_results.py
+    python pooling-2026/write_results.py
 
 Every number in RESULTS.md comes from those two files; nothing is typed by hand.
 """

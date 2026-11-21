@@ -3,7 +3,7 @@
 Contracts drafted by a model (`contract_author: model`), 20 Nov 2026, against
 google-deepmind/alphaevolve_repository_of_problems @ 8f447457957deac61e28bf1676746f0753b3b2f8.
 No `consilience stress` run, no attack: the only scorer calls are `validate_contract.py`'s.
-Every `OK` row passes `python benchmarks/evaluator-stress/validate_contract.py` (numba 0.68.1, shapely
+Every `OK` row passes `python evaluator-stress/validate_contract.py` (numba 0.68.1, shapely
 as installed). Minutes are honest estimates of authoring time. Extraction results: `EXTRACTION_B.yaml`.
 
 | slug | status | minutes | contract lines | glue lines | notes |

@@ -10,6 +10,6 @@
 
 The full licence texts are in the source repositories. The Apache-2.0 text is at https://www.apache.org/licenses/LICENSE-2.0.
 
-The rest of consilience-core is MIT. These folders keep their own licences.
+The rest of consilience-benchmarks is MIT. These folders keep their own licences.
 
 **Claims about these files.** Any statement concerns the published code at the stated commit only. It says nothing about the authors' internal systems or results.

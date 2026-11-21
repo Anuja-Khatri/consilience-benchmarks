@@ -1,6 +1,6 @@
 """Second-way check (PREREGISTRATION.md): recompute M1, M2 and M3 without the engine.
 
-    python studies/pooling-2026/check_independent.py
+    python pooling-2026/check_independent.py
 
 A separate implementation with pandas and the standard library. It does NOT import
 consilience. It re-implements, from the written rules (docs/packs/bioactivity.md and the

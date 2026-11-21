@@ -2,7 +2,7 @@
 
 Written 20 Nov 2026 by a model (`contract_author: model` on every contract). No `consilience stress` run, no
 attack, no bug hunting: the only scorer calls are `validate_contract.py`'s (reference and `initial`).
-All `OK` rows pass `python benchmarks/evaluator-stress/validate_contract.py contracts/OE/*/contract.yaml`.
+All `OK` rows pass `python evaluator-stress/validate_contract.py contracts/OE/*/contract.yaml`.
 
 Scope: the 16 `examples/alphaevolve_math_problems/*` evaluators (heilbronn_convex, hexagon_packing and
 minimizing_max_min_dist each ship two sizes in separate folders, so one contract each), plus

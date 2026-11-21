@@ -1,6 +1,6 @@
 # LABELS coverage
 
-Pre/post-fix contracts for labelled bugs (commits in `benchmarks/evaluator-stress/SOURCES.yaml`,
+Pre/post-fix contracts for labelled bugs (commits in `evaluator-stress/SOURCES.yaml`,
 `label_commits`). This file was started by the OpenEvolve-labels author; rows for other labelled sets (DM, DMR)
 belong in their own section below.
 

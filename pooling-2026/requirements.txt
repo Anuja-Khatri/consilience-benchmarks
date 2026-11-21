@@ -1,0 +1,5 @@
+# The Consilience engine (pinned commit) and the packages the study scripts and notebook use.
+consilience @ git+https://github.com/Anuja-Khatri/consilience-core@ec4d08c1ecf50409cee03003be0c07b5592e5b4e
+pandas
+matplotlib
+nbformat

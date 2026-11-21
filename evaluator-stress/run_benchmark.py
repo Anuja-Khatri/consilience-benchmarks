@@ -1,6 +1,6 @@
 """Run the preregistered benchmark (build step 5). Do not run before PREREGISTRATION.md is committed.
 
-    python benchmarks/evaluator-stress/run_benchmark.py [--budget standard] [--seed 0] [--jobs 3] [--only SET/slug ...]
+    python evaluator-stress/run_benchmark.py [--budget standard] [--seed 0] [--jobs 3] [--only SET/slug ...]
 
 Runs `consilience stress` on every contract under contracts/ (one process per contract), writes each receipt
 to results/receipts/<SET>/<slug>/, and collects results/results.json and results/per_evaluator.csv.

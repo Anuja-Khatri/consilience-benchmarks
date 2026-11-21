@@ -1,6 +1,6 @@
 """Figures for the study write-up (static PNG, light surface), from results/results.json.
 
-    python studies/pooling-2026/make_figures.py
+    python pooling-2026/make_figures.py
 
 fig1_refused_by_target.png  share of R0-comparable pairs the pooling check refuses, per
                             target (one series; EGFR named in bold)

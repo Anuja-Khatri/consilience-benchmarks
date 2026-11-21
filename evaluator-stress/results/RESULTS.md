@@ -1,9 +1,9 @@
 # Evaluator-stress benchmark: results (run 3, 45 contracts, 20 Nov 2026)
 
 **Setup:**
-- **Preregistration:** `../PREREGISTRATION.md`, committed at 6049a69 before any run.
+- **Preregistration:** `../PREREGISTRATION.md`, committed at consilience-core 6049a69 (here: 29c3f5f) before any run.
 - **Deviations:** `../VERIFICATION_LOG.md`. In short: the run was capped at 45 contracts by a seeded rule; there were engine robustness fixes; decision rules v1.1 apply.
-- **Run:** budget `standard`, seed 0; engine as of commit 34350aa.
+- **Run:** budget `standard`, seed 0; engine as of consilience-core commit 34350aa (the receipts verify with the pinned engine in `../requirements.txt`).
 - **Raw results:** `results.json`, `per_evaluator.csv` and `receipts/`.
 - **Independent check:** `independent_check.json`.
 
@@ -80,8 +80,8 @@ It reliably finds the **common classes** of scorer loopholes: invalid input, sel
 ## 6. Reproducing
 
 ```bash
-pip install -e '.[stress]' -r benchmarks/evaluator-stress/requirements.txt
-for r in $(find benchmarks/evaluator-stress/results -name receipt.json); do consilience verify "$r" > /dev/null && echo "ok  $r" || echo "BAD $r"; done
+pip install -r evaluator-stress/requirements.txt
+for r in $(find evaluator-stress/results -name receipt.json); do consilience verify "$r" > /dev/null && echo "ok  $r" || echo "BAD $r"; done
 ```
 
 On a fresh clone (20 Nov 2026, Python 3.13), all 47 stored receipts verify once `requirements.txt` is installed. The first fresh-clone attempt, using only the packages listed earlier in the external note, failed on 3 receipts: their scorers import `matplotlib` and `pydantic`. Those two are now in `requirements.txt`.
@@ -91,7 +91,7 @@ On a fresh clone (20 Nov 2026, Python 3.13), all 47 stored receipts verify once 
 - **Pinned** to the recorded sizes (`--steps-from`) and written to the original location: **17 of 17 receipt hashes are identical** to the stored ones, on Python 3.13 against 3.12 for the original run. Written elsewhere, only the stored contract path differs, because it is relative to `--out` (checked on `DM/flat_polynomials_c_minus`).
 
 ```bash
-consilience stress benchmarks/evaluator-stress/contracts/LABELS/oe562_erdos_pre/contract.yaml \
-  --steps-from benchmarks/evaluator-stress/results/receipts/LABELS/oe562_erdos_pre/receipt.json --out /tmp/rerun
+consilience stress evaluator-stress/contracts/LABELS/oe562_erdos_pre/contract.yaml \
+  --steps-from evaluator-stress/results/receipts/LABELS/oe562_erdos_pre/receipt.json --out /tmp/rerun
 ```
 
