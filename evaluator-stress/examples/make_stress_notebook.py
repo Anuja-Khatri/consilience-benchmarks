@@ -28,7 +28,7 @@ pinned commits (`SOURCES.yaml`):
 4. re-checking two stored findings on DeepMind's problem notebooks without re-running the search.
 
 What it is not: a proof (PASS means no counterexample within the budget), a security sandbox, or a
-discovery engine for deep loopholes. See the engine guide ([`docs/stress.md`](https://github.com/Anuja-Khatri/consilience-core/blob/stress-check/docs/stress.md)) and `evaluator-stress/results/RESULTS.md`."""),
+discovery engine for deep loopholes. See the engine guide ([`docs/stress.md`](https://github.com/Anuja-Khatri/consilience-core/blob/main/docs/stress.md)) and `evaluator-stress/results/RESULTS.md`."""),
     code("""import json, tempfile, time
 from pathlib import Path
 from consilience import __version__, verify

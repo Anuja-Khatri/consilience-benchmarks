@@ -1,6 +1,6 @@
 # evaluator-stress: a benchmark for checking scoring code before program search
 
-The benchmark behind `consilience stress` (engine guide: [`docs/stress.md`](https://github.com/Anuja-Khatri/consilience-core/blob/stress-check/docs/stress.md) in consilience-core).
+The benchmark behind `consilience stress` (engine guide: [`docs/stress.md`](https://github.com/Anuja-Khatri/consilience-core/blob/main/docs/stress.md) in consilience-core).
 
 | Path | What it is |
 |---|---|
