@@ -37,7 +37,7 @@ Limits come first in every results file.
 
 ```bash
 git clone https://github.com/Anuja-Khatri/consilience-benchmarks && cd consilience-benchmarks
-pip install -r evaluator-stress/requirements.txt          # engine at a pinned commit + the scorers' own dependencies
+pip install -r evaluator-stress/requirements.txt          # consilience 0.3.0 from PyPI + the scorers' own dependencies
 consilience verify evaluator-stress/results/receipts/DM/flat_polynomials_c_minus/receipt.json
 consilience stress evaluator-stress/contracts/LABELS/oe548_cpr_pre/contract.yaml \
   --steps-from evaluator-stress/results/receipts/LABELS/oe548_cpr_pre/receipt.json --out /tmp/rerun   # re-run one contract
