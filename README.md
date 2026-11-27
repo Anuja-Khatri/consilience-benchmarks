@@ -1,5 +1,15 @@
 # consilience-benchmarks
 
+## At a glance
+
+- **What it checks:** whether the scoring functions used for AI program search (AlphaEvolve and its open versions) and reinforcement learning accept invalid answers, trust numbers a candidate reports about itself, or break simple invariances.
+- **Why it matters:** in program search the scorer is the reward. If it accepts an invalid answer, the optimiser will find that hole and report a record that is not real. These checks run before the search does.
+- **Who it is for:** teams running AlphaEvolve-style search or RL with code-based rewards, and maintainers of public problem sets and scorers.
+- **Tested on:** 89 public scoring functions from Google DeepMind's AlphaEvolve repositories, OpenEvolve, CodeEvolve, ShinkaEvolve and Google Cloud's AlphaEvolve samples, plus 13 scorer bugs that were already publicly reported. It caught 11 of the 13, and a second checker that shares no code with the first agreed on 76 of 76 findings.
+- **Try it:** the commands under "evaluator-stress in brief" below re-run any result from a fresh clone.
+
+Part of [The Consilience](https://theconsilience.io), a verification layer for AI-for-science. All public repos: [github.com/Anuja-Khatri](https://github.com/Anuja-Khatri).
+
 Public benchmarks and studies for the checks in the [Consilience engine](https://github.com/Anuja-Khatri/consilience-core). Each one has:
 - a protocol committed before any run;
 - labels or targets taken from cited sources;
